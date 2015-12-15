@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>home</title>
+<style>
+body {
+	margin:0px
+	padding:0px;
+}
+
+.container {
+	margin:20px auto;
+	width:250px;
+}
+
+.head {
+	width:100px;
+	height:150px;
+	border-radius: 150px; 
+	background-color:#FC9;
+	position:relative;
+	z-index:2;
+}
+
+.hair {
+	position:absolute;
+	top:-10px;
+	left:-10px;
+	width:120px;
+	background-color:#000;
+	height:60px;
+	border-top-left-radius:60px;
+	border-top-right-radius:60px;
+}
+
+.spriet1, .spriet2 {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 20px solid #000;
+	position:absolute;
+	top:50px;
+}
+
+.spriet1 {
+	left:-10px;
+}
+
+.spriet2 {
+	left:50px;
+}
+
+.spriet1:before, .spriet1:after, .spriet2:before, .spriet2:after {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 20px solid #000;
+	content:"";
+	position:absolute;
+	top:-20px;
+}
+
+.spriet1:before {
+	left:10px;
+}
+
+.spriet1:after {
+	left:30px;
+}
+
+.spriet2:before {
+	left:10px;
+}
+
+.spriet2:after {
+	left:30px;
+}
+
+.eye1, .eye2 {
+	width:15px;
+	height:25px;
+	background-color:#fff;
+	border:2px solid #000;
+	border-radius: 15px;
+	position:absolute;
+	top:65px;
+}
+
+.eye1 {
+	left:25px;
+}
+
+.eye2 {
+	left:55px;
+}
+
+.eye1:after, .eye2:after {
+	width:10px;
+	height:15px;
+	content:"";
+	position:absolute;
+	top:10px;
+	left:5px;
+	background-color:#000;
+	border-radius: 10px;
+	animation-name:roll-eyes;
+	animation-duration:2s;
+	animation-timing-function: linear;
+}
+
+@keyframes roll-eyes {
+	0% { top:10px;left:5px; }
+	50% { top:10px;left:0px; }
+	100% { top:10px;left:5px; }
+}
+
+.nose:before {
+	content:">";
+	position:absolute;
+	top:90px;
+	left:45px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+}
+	
+.mouth {
+	width: 30px;
+	height:40px;
+	border-radius: 50%;
+	box-shadow: 5px 15px 0 0 #000;
+	position:absolute;
+	top:80px;
+	left:30px;
+}
+
+.body {
+	width:160px;
+	height:200px;
+	border-top-left-radius: 20px; 
+	border-top-right-radius: 20px; 
+	border-bottom-left-radius: 2px; 
+	border-bottom-right-radius: 2px; 
+	background-color:#cc0000;
+	position:relative;
+	margin-top:-10px;
+	margin-left:-25px;
+}
+
+.shirt {
+	border-bottom: 200px solid white;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	height: 0;
+	width: 30px;
+	position:absolute;
+	left:20px;
+}
+
+.arm1 {
+	width: 100px;
+	height: 40px;
+	-webkit-transform: skew(20deg);
+	   -moz-transform: skew(20deg);
+	     -o-transform: skew(20deg);
+	background: #cc0000;
+	position:absolute;
+	left:-70px;
+	top:15px;
+	transform:rotate(-20deg);
+	border-top-right-radius:5px;
+	border-bottom-left-radius:10px;
+}
+
+.arm1:before {
+	width: 120px;
+	height: 40px;
+	-webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	     -o-transform: skew(-20deg);
+	background: #cc0000;
+	position:absolute;
+	left:-40px;
+	top:-40px;
+	transform:rotate(90deg);
+	border-bottom-right-radius:10px;
+	content:"";
+	animation-name:wave;
+	animation-duration:3s;
+	animation-timing-function: ease;
+}
+
+@keyframes wave {
+	0% { transform:rotate(50deg); }
+	100% { transform:rotate(130deg); }
+}
+	
+</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="head">
+    	<div class="hair"></div>
+        <div class="spriet1"></div>
+        <div class="spriet2"></div>
+        <div class="eye1"></div>
+        <div class="eye2"></div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+    </div>
+</div>
+</body>
+</html>
